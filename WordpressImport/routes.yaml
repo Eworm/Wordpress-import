@@ -1,0 +1,7 @@
+routes:
+  /:
+    as: addons.wordpress_import
+    uses: index
+  post@map:
+    as: addons.wordpress_import.map
+    uses: map
