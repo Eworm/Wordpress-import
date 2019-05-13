@@ -195,7 +195,6 @@ class WordpressImportController extends Controller
     public function grab_image($url, $path)
     {
         $container = AssetContainer::wherePath($path);
-        // $url = str_replace(' ', '+', $url);
         $basename = basename($url);
         $ch = curl_init();
 
@@ -211,10 +210,7 @@ class WordpressImportController extends Controller
         curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1);
         $data = curl_exec($ch);
 
-        // if (!File::disk('local')->exists($container->data()['path'] . '/' . $basename, $data)) {
-        // File::disk('local')->put($container->data()['path'] . '/' . $basename, $data);
-        File::disk('local')->put($basename, $data);
-        return $container->data()['url'] . '/' . $basename;
+        File::disk('local')->put('assets/wp/' . $basename, $data);
         curl_close($ch);
     }
 }
