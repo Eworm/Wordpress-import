@@ -1,5 +1,5 @@
 name: wordpress-import
 version: '1.0'
-description: 'Import a wordpress xml'
+description: 'Import a wordpress xml file'
 developer: 'Wout Mager'
 developer_url: 'https://woutmager.nl'

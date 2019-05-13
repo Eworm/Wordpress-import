@@ -168,11 +168,7 @@ class WordpressImportController extends Controller
         // Clear the stache
         Please::call('clear:stache');
 
-        return $this->view('map', [
-            'data' => $request,
-            'files' => $_FILES,
-            'map' => $posts
-        ]);
+        return $this->view('map');
     }
 
 

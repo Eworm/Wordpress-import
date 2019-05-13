@@ -14,7 +14,7 @@
             <div class="flexy">
 
                 <div class="form-group fill">
-                    <label>JSON File</label>
+                    <label>XML File</label>
                     <input type="file" class="form-control" name="file">
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg ml-16">Import</button>
